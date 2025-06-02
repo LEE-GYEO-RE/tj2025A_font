@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+
+    <img src="더조은.jpg" width="150" height ="150" border ="2"><br/>
+
+    이름<br/>
+    <input type="text" placeholder="김조은" autofocus/>
+    접수번호
+    <input type="text" maxlength="6" placeholder="TJ1234"/><br/>
+    <hr/>
+    성별
+    <input type="radio" name="성별선택"/>여자
+    <input type="radio" name="성별선택"/>남자<br/>
+    나이
+    <select>
+        <option>20세 미만</option>
+        <option>20세 이상 30세 미만</option>
+        <option>30세 이상 40세 미만</option>
+        <option>40세 이상 50세 미만</option>
+        <option>50세 이상</option>
+    </select><br/>
+    <hr/>
+    방문과
+    <select>
+        <option>내과</option>
+        <option>이비인후과</option>
+        <option>신경과</option>
+    </select><br/>
+    방문경로
+    <input type="checkbox" name="방문경로선택">네이버 검색
+    <input type="checkbox" name="방문경로선택">sns(인스타그램,페이스북 등) 검색
+    <input type="checkbox" name="방문경로선택">지인 추천<br/>
+    <hr/>
+
+    <ol>
+            <h4><li>외료진이 친절했나요?</h4>
+            <input type="radio" name="응답여부"/>예 <input type="radio" name="응답여부"/>아니오 </li> 
+            
+                <h4><li>병원 시설은 만족했나요? <br /></h4>
+                <input type="radio" name="만족여부"/>1점
+                <input type="radio" name="만족여부"/>2점
+                <input type="radio" name="만족여부"/>3점
+                <input type="radio" name="만족여부"/>4점
+                <input type="radio" name="만족여부"/>5점
+            </li>
+            <h4><li>접근성이 좋았나요? <br /></h4>
+                <input type="radio" name="응답여부"/>예
+                <input type="radio" name="응답여부"/>아니오
+            </li>
+            <h4><li>재방문 의사가 있으신가요? <br /></h4>
+                <input type="radio" name="응답여부"/>예
+                <input type="radio" name="응답여부"/>아니오
+            </li>
+            <h4><li>대기시간이 길었나요? <br /></h4>
+                <input type="radio" name="응답여부"/>0~10분
+                <input type="radio" name="응답여부"/>10~15분
+                <input type="radio" name="응답여부"/>15~20분
+                <input type="radio" name="응답여부"/>20~30분
+            </li>
+
+    </ol> <br />
+    <h4> 6.건의사항</h4> <br />
+    <textarea cols="70" rows="15" placeholder="내용을 입력하세요"></textarea> <br />
+    <input type="submit" value="제출하기"/>
+    <input type="reset" value="다시쓰기"/>
+    설문 날짜 <input type="date"/><br/>
+</body>
+</html>

@@ -1,0 +1,36 @@
+/*확인용 : 완성후 삭제*/
+
+.container{
+        width: 320px; /*width 안넣으면 magin 적용안됨.*/
+        margin: 50px auto;
+        text-align:  center;
+        box-shadow: 0px 3px 5px pink;
+        border-radius: 10px;
+        padding-bottom: 5px 0px 30px 0px;
+}
+
+.input-id , .input-pwd {
+    width: 150px; height: 30px;
+    padding: 0px 15px ;
+    border: 1px solid gray; /*none : 테두리 없음*/
+    border-radius: 10px;
+    margin: 7px 0px;
+}
+
+.input-btn{
+    background-color: blue;
+    color: white;
+    border: 1px solid gray;
+    border-radius: 10px;
+    /* 버튼 크기 조정할 때 주로 안쪽 여백*/
+    padding: 5px 20px;
+    margin-bottom: 13px;
+}
+
+a{
+    text-decoration: none;
+}
+
+foot{ font-weight: 500;
+      font-size: 13px;      
+}

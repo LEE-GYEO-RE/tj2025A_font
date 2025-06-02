@@ -1,0 +1,31 @@
+
+.container{
+    border: solid 1px gray;
+}
+
+.img{ width: 400px;}
+
+.title{
+    border-top: 1px solid gray;
+    font-weight: 500;
+    padding: 10px 0px 10px 5px;
+}
+
+.price{
+    font-weight: 500;
+    padding: 10px 0px 10px 5px;
+}
+
+.text{
+    font-weight: 350;
+    padding: 10px 0px 10px 5px;
+}
+
+.rate{
+    font-weight: 350;
+    padding: 10px 0px 10px 5px;
+}
+.number{
+    font-weight: 500;
+    color: orange;
+}

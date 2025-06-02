@@ -1,0 +1,23 @@
+
+.title{
+        font-family: 궁서;
+        font-size: 50px;
+        font-style: italic;
+}
+
+.content{
+        font-family: 궁서;
+        font-weight: bold;
+        color: blue;
+        word-spacing: 10px;
+        letter-spacing: 10px;
+        line-height: 160%;
+}
+
+.writer{
+        text-align: center;
+        color: red;
+        font-weight: bold;
+        text-decoration: underline overline line-through;
+
+}

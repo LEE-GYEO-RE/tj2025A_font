@@ -1,0 +1,14 @@
+.책{  width: 300px;}
+.제목{
+    margin: 20px 0px 15px 2px;
+}
+.포인트1{ color: orange;
+          font-size: 35px;   
+}
+.박스{  background-color: #1f4e71;
+        color: white;
+        padding: 25px 10px;
+        line-height: 160%;
+        width: 400px;
+}
+.포인트2{color: orange;}

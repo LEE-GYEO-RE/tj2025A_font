@@ -1,0 +1,143 @@
+/* 공통 부문*/
+*{
+    padding: 0px; padding: 0px; /* 기본 여백 제거*/
+    box-sizing: border-box; /* 구역 사이즈를 테두리까지 */
+}
+
+li{ list-style: none; /*글머리 제거*/  }
+
+a{  text-decoration: none; /*밑줄 제거 */
+    color: black; }
+
+/* 헤더 CSS */
+
+#header{ /*id를 선택할 때는 #id명*/
+    display: flex; /*하위 요소 배치 방법 : 크롬의 개발자 도구(F12) 활용 권장*/
+    flex-direction: row; /*기본 값*/
+    justify-content: space-between; /* 양쪽 끝 균등 가로 정렬*/
+    align-items: center;/*세로 가운데 정렬*/
+    /*해당 요소 가운데 정렬*/
+    margin: 0 auto; /*기본 100%라 width 가로 사이즈 없이 쓰면 적용 안됨*/ 
+    width: 1280px; /*가로 사이즈*/
+}
+
+.top-menu{ /*class를 선택할 때는 .class */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main-menu{
+    display: flex;
+    justify-content: flex-end;
+}
+.main-menu > li{
+    font-size: 20px; /*글꼴 크기*/
+    font-weight: bold; /*글꼴 굴기*/
+    margin: 20px 0px 10px 100px;
+}
+
+/*본문 CSS*/
+#main-img > img { width: 100%;}
+
+#main{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px auto;
+    width: 1280px;
+}
+
+.sidebar{ width: 250px; }
+.content{
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+}
+.content > .leftbox{ width: 490px; }
+.content > .rightbox{ width: 490px; }
+
+.sidebar > .title{
+    background-color: #0ca9a2;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+}
+.sidebar > .comment{
+    line-height: 160%;
+    padding: 5px;
+}
+.sidebar > .searchbox > .search-input{
+    width: 180px; height: 30px;
+    border-radius: 10px;
+    padding: 1px 6px;
+}
+.sidebar > .searchbox > .search-btn{
+    padding: 4px 10px;
+}
+.sidebar > .searchbox .searchbox{
+    margin: 10px 0px;
+}
+
+.sidebar > .sub-title{
+    border-top: solid 2px black;
+    border-bottom: 1px solid #eeeeee;
+    margin-top: 30px;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.sidebar > .sub-menu > li{ padding: 5px 10px;}
+
+/*내용 본문 CSS부문*/
+
+.content .sub-title{ /*선택자 (띄어쓰기) 자손선택자*/
+    border-bottom:  solid 2px black;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.content > .leftbox > .board > li {
+    display: flex;
+    justify-content: space-between;
+    padding: 7px 0px;
+}
+.content > .leftbox > .board{
+    margin-bottom: 50px;
+}
+
+/*오른쪽 내용*/
+.content > .rightbox > .product-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+.content > .rightbox > .product-list > .product{
+    width: 240px;
+    margin-bottom: 30px;
+}
+
+
+/*푸터 CSS 부문*/
+#footer{
+    background-color: #05344e;
+    color: white; padding: 20px 0px;
+}
+.footer-inner{
+    width: 1280px;
+    margin: 0 auto;
+}
+.footer-inner > .ftop-menu{
+    display: flex;
+    margin-bottom: 30px;
+}
+.footer-inner > .ftop-menu > li{
+    margin-right: 40px;
+}
+.footer-inner > .fbottom-menu{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.footer-inner > .fbottom-menu > .footer-title{
+    margin-bottom: 10px;
+}
+.footer-inner > .fbottom-menu li{
+    margin: 5px 0px;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <link rel='stylesheet' href='1_box.css'>
+</head>
+<body>
+    <!--마크업은 렌더링 되면서 하나의 구역을 차지하고 기본 CSS 속성을 갖는다-->
+    <h1> BOX1 </h1>
+    <h2> BOX2 </h2>
+    <h3> BOX3 </h3>
+    <!--기본 CSS 속성이 없는 마크업(새로 커스텀 해야하기 때문에 많이 씀)-->
+    <div> BOX4 </div> <!--display : block-->
+    <span> BOX5 </span> <!--display : inline -->
+    
+        <div> <!-- 인천광역시 -->
+        <div>  <!-- 부평구 -->
+            <div> <!-- 3동 -->
+                <div> 삼성아파트 </div> <!-- 번지 -->
+            </div>
+        </div>
+        <div> <!-- 연수구 -->
+            <div> <!-- 1동 --> <!-- 번지 -->
+                <div> 롯데아파트 </div>
+            </div>
+            <div>  <!-- 2동 -->
+                <div> <!-- 번지 -->
+                    <div> LG아파트:유재석집 </div>  <!-- 101호 -->
+                </div> 
+            </div>
+        </div>
+    </div>
+    <div> <!-- 경기도 -->
+    </div>
+
+    
+    <h4 class="구역1"> 구역1 </h4>
+    <div class="구역2"> 구역2
+        <img src="../image.png" /> <!--상대경로 : 현재 파일의 위치에서 기준-->
+    </div>   
+    <form>
+        <input />
+    </form> 
+
+    <div class="구역3"> 구역3 </div>
+    <div class="구역4"> 구역4 </div>
+    <div class="구역5"> 구역5 </div>
+    <div class="구역6"> 구역6 </div>
+</body>
+</html>
