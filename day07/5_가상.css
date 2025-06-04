@@ -46,7 +46,7 @@ li{ list-style-type: none;}
 #header2 .subMenu2{
     position: absolute; /* 가장 가까운 상위요소의 relative를 갖는 요소 기준 */
     top: 40px;
-    width: 100%;
+    width: 100%; /* 전체 사이즈 */
     background-color: skyblue;
     display: none; /* hover 되기전에는 숨기기 */
 }
