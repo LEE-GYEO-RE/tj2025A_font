@@ -1,0 +1,24 @@
+#box{
+    background-color: red;
+    width : 700px; height : 450px;
+    margin: 0 auto; /* 가운데 정렬 */
+    position: relative; /* 하위 요소의 absolute 속성값 기준 설정 */
+
+}
+.box1{
+    background-color: yellow;
+    border-radius: 10px;
+    width: 100px; height: 70px;
+    position: absolute; /* 가장 가까운 상위 요소의 relative 속성값을 가진 상위 요소 기준 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.box1-1{ left: 300px; top: 50px; }
+.box1-2{ left: 150px; top: 120px; }
+.box1-3{ left: 450px; top: 120px; }
+.box1-4{ left: 150px; top: 250px; }
+.box1-5{ left: 450px; top: 250px; }
+.box1-6{ left: 300px; top: 330px; }

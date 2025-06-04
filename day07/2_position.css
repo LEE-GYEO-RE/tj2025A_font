@@ -1,0 +1,24 @@
+/* 1. 팝업 CSS */
+#popup{
+    background-color: beige;
+    width: 100px; height: 100px;
+    position: fixed ; /* 화면 위치 고정 */
+    bottom: 50px; right: 50px;
+    /*position 사용할 경우 다른 요소 겹치는 경우 : z-index */ 
+    /* z-index : position 끼리 겹쳤을 때
+         z-index의 값이 높을수록 위에 표시된다. */
+    z-index: 2;   
+}
+
+/* 2. 헤더메뉴 CSS */
+#header{
+    display: flex;
+    justify-content: space-between;
+    background-color: yellow;
+    position: sticky;
+    /* position: sticky; : 지정한 요소의 구역이 스크롤 밖으로 나갔을 때 위치 고정 */
+    top: 0px; /* 고정 위치 */
+    z-index: 3;
+}
+
+#header > ul{ display: flex;}
