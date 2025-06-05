@@ -1,0 +1,56 @@
+/* 1. background */
+.box{
+    border: 2px solid red;
+    padding: 30px;
+}
+.box p{
+    background-color: white;
+    padding: 5px; border: 1px solid white;
+    width: 200px;
+    /* 이미지 위로 텍스트 */
+}
+.color1{
+    /* background-color: blue; */
+    /* background-color: rgb(0, 0, 255); */
+    /* background-color: #0000ff; */
+    /* rgba( 레드, 그린. 블루, 투명도 ) : 1(100%) ~ 0(0%)*/
+    background-color: rgba(0, 0, 255, 0.5);
+}
+.img1{ 
+    /* background-image: url("파일경로") 
+        -이미지 위에 텍스트 작성 할때 */
+    background-image: url(../배경.jpg);
+    background-position: center; /* 이미지 위치 */
+    background-repeat: no-repeat; /* 채우기 없음 */
+}
+.img2{
+    background-image: url(../찐패턴이미지.jpg);
+    background-repeat: repeat; /* (기본값) 만약 비어있는 공간이 있으면 채움 */
+}
+.img3{
+    background-image: url(../아이콘.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; 
+    /* 비율 유지 , 요소 안에 표시 (비율 안맞으면 빈 공간 생길 수 있음)*/
+    background-color: black; 
+    /* 만일 비어있는 공간이 있을 때 배경색 */
+}
+.img4{
+    background-image: url(../배경.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* 스크롤로 이동해도 배경 이미지는 고정 */
+    /* fixed : 패럴랙스 효과 ->> 요소의 텍스트는 고정, 배경은 스크롤에 따라 이동 효과*/
+}
+
+.box2{
+    width: 100px; height: 100px;
+    border: 2px solid red;
+    background-image: url(../아이콘들.png); /* 지정된 요소의 사이즈가 필요함 */
+    background-repeat: no-repeat;
+    background-position: -50px -300px; 
+    /* 개발자 도구 아이콘 사진에서 마우스 휠로 포지션 잡아서 씀 */
+}
