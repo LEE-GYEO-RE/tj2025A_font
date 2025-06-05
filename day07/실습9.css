@@ -117,4 +117,35 @@ a{color: black; text-decoration: none;}
 #footerTop{
     background-color: #f7f7f7;
 }
-#footerContent{}
+#footerContent{ 
+    width: 1400px; margin: 0 auto;
+    display: flex; justify-content: space-between;
+    padding: 50px 100px;
+}
+#footerContent h3{ margin: 10px 0px; font-size: 16px; font-weight: bold;}
+#footerContent h4{ margin: 10px 0px; font-size: 16px; font-weight: bold;}
+#footerContent ul > li{ margin-bottom: 10px;}
+
+/* 6.팝업 */
+#popup{
+    position: fixed;
+    right: 0px; top: 30%;
+}
+#popup img{ width: 20px;}
+#popup > ul >li{
+    padding: 14px;
+    border: 1px solid#dbdbdb;
+    background-color: #f7f7f7;
+    position: relative;
+}
+#popup > ul > li > span{
+    position: absolute; top: 10px; right: 40px;
+    display: none;
+    width: 80px; height: 20px;
+    background-color: black; color: white;
+    border-radius: 5px; text-align: center;
+}
+#popup > ul > li:hover .popupSub{
+    display: inline;
+}
+
