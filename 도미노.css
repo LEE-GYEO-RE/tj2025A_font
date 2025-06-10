@@ -10,6 +10,10 @@
     margin-top: 50px;
 }
 
+.page-title-header{
+    padding: 20px;
+}
+
 .depth-area {
     position: absolute;
     right: 0;
@@ -22,8 +26,20 @@
     margin: 0 auto;
 }
 
-.maenu-nav>ul>li {
+.menu-nav-wrap{
+    position: relative;
+    margin-top: 28px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #111;
+}
+
+.menu-nav-wrap ul{
+    display: flex;
+}
+.menu-nav>ul>li {
     list-style: none;
+    display: inline-block;
+    padding: 20px;
 }
 
 .dominocon-guide {
@@ -35,9 +51,25 @@
     border-bottom: 1px solid #eee;
 }
 
+.dominocon-img{
+    padding-right: 40px;
+}
+
 .dominocon-guide .dominocon-img img {
     width: 123px;
+    border: 0;
 }
+
+.menu-list.ect-type > ul{
+    display: flex;
+}
+
+.prd-list-rgt{
+    list-style: none;
+    width: 276px;
+    height: 327px;
+}
+
 
 .product-card {
     width: 200px;
@@ -95,4 +127,29 @@
     font-size: 14px;
     font-weight: bold;
     cursor: pointer;
+}
+
+.menu-list.ect-type{
+    padding-top: 50px;
+}
+.menu-list{
+    margin-bottom: 80px;
+}
+
+.menu-list.ect-type ul{
+    width: 100%;
+    padding: 0;
+    font-size: 0;
+    vertical-align: top;
+}
+
+.menu-list.ect-type li{
+    position: relative;
+    display: inline-block;
+}
+
+img{
+    border: 0;
+    vertical-align: top;
+    width: 100%;
 }
