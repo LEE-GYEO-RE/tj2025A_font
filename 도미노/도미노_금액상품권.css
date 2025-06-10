@@ -3,7 +3,11 @@
     padding: 0px; margin: 0px;
     box-sizing: border-box;
 }
-li{ list-style: none; }
+/*--------합칠 때 금액상품권 페이지에 추가 해야함--------*/
+.headerTop li{ list-style: none; }
+.mainMenu li{list-style: none;}
+#footer li{list-style: none;}
+/*--------합칠 때 금액상품권 페이지에 추가 해야함--------*/
 a{  
     text-decoration: none;
     color: black;
@@ -128,6 +132,12 @@ h2{
     color: #111;
 }
 
+.depth-area{
+    position: absolute;
+    right: 0;
+    top: 16px;
+}
+
 .depth-area ol{
     list-style: none;
 }
@@ -138,18 +148,9 @@ h2{
     
 }
 
-.gift_sub-type menu .depth-area {
-    position: absolute;
-    right: 0;
-    top: 16px;
-}
 a{
     text-decoration: none;
     color: #888888;
-}
-
-.list-text{
-    margin-left: 40px;
 }
 
 .list-text{
@@ -158,6 +159,8 @@ a{
     line-height: 24px;
     position: relative;
     padding-left: 12px;
+    margin-left: 40px;
+
 }
 
 .list-red{
@@ -183,7 +186,9 @@ a{
     list-style: none;
     display: inline-block;
     padding: 10px;
+    color: #888888;
 }
+
 
 .dominocon-guide {
     display: flex;
@@ -210,20 +215,12 @@ a{
 .prd-list-rgt{
     list-style: none;
     width: 276px;
-}
-
-
-.product-card {
-    width: 200px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px;
 }
 
 
 .product-details {
-    padding: 10px;
+    padding-top: 10px;
     font-size: 14px;
 }
 
@@ -237,22 +234,21 @@ a{
 
 .quantity-container {
     display: flex;
-    align-items: center;
-    margin-top: 10px;
+    margin-top: 15px;
+    width: 100%;
 }
 
 .quantity-container button {
-    width: 30px;
-    height: 30px;
+    width: 60px;
+    height: 50px;
     font-size: 18px;
     border: 1px solid #ccc;
     background: #fff;
-    cursor: pointer;
 }
 
 .quantity-container input {
-    width: 40px;
-    height: 30px;
+    width: 70px;
+    height: 50px;
     text-align: center;
     border: 1px solid #ccc;
     border-left: none;
@@ -261,8 +257,9 @@ a{
 
 .add-button {
     margin-top: 10px;
-    width: 100%;
-    background-color: #f73357;
+    width: 120px;
+    height: 50px;
+    background-color: #ff143c;
     color: white;
     border: none;
     padding: 8px 0;
@@ -276,7 +273,7 @@ a{
 }
 
 .menu-list-area2{
-    border-bottom: 2px solid #eee;
+    margin-bottom: 80px;
 }
 
 .menu-list.ect-type{
@@ -303,6 +300,16 @@ a{
 
 img{
     border: 0;
+    width: 100%;
+}
+.button-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 10px;
+}
+
+.product-card{
     width: 100%;
 }
 /*==============================hover 메뉴 CSS==============================*/
