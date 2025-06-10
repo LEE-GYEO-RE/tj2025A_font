@@ -7,19 +7,53 @@
 
 .page-title {
     position: relative;
-    margin-top: 50px;
+    margin-top: 40px;
 }
-
+h2{
+    line-height: 1em;
+}
 .page-title-header{
-    padding: 20px;
+    padding: 10px;
+    font-size: 32px;
+    font-weight: 400;
+    color: #111;
 }
 
-.depth-area {
+.depth-area ol{
+    list-style: none;
+}
+
+.depth-area ol li{
+    display: inline-block;
+    font-size: 13px;
+    
+}
+
+.gift_sub-type menu .depth-area {
     position: absolute;
     right: 0;
     top: 16px;
 }
+a{
+    text-decoration: none;
+    color: #888888;
+}
 
+.list-text{
+    margin-left: 40px;
+}
+
+.list-text{
+    font-size: 13px;
+    color: #888888;
+    line-height: 24px;
+    position: relative;
+    padding-left: 12px;
+}
+
+.list-red{
+    color: #ff143C;
+}
 .inner-box {
     position: relative;
     width: 1200px;
@@ -28,8 +62,8 @@
 
 .menu-nav-wrap{
     position: relative;
-    margin-top: 28px;
-    padding-bottom: 15px;
+    margin-top: 20px;
+    padding-bottom: 10px;
     border-bottom: 2px solid #111;
 }
 
@@ -39,7 +73,7 @@
 .menu-nav>ul>li {
     list-style: none;
     display: inline-block;
-    padding: 20px;
+    padding: 10px;
 }
 
 .dominocon-guide {
@@ -67,7 +101,6 @@
 .prd-list-rgt{
     list-style: none;
     width: 276px;
-    height: 327px;
 }
 
 
@@ -129,27 +162,37 @@
     cursor: pointer;
 }
 
-.menu-list.ect-type{
-    padding-top: 50px;
-}
 .menu-list{
     margin-bottom: 80px;
 }
 
-.menu-list.ect-type ul{
+.menu-list-area2{
+    border-bottom: 2px solid #eee;
+}
+
+.menu-list.ect-type{
+    position: absolute;
+    padding-top: 50px;
+}
+.menu-list-area2 > ul{
+    display: flex;
     width: 100%;
-    padding: 0;
+    padding: 30px;
     font-size: 0;
-    vertical-align: top;
+    justify-content: center;
+
 }
 
 .menu-list.ect-type li{
     position: relative;
     display: inline-block;
+    width: 276px;
+    margin-left: 32px;
+    font-size: 14px;
+    vertical-align: top;
 }
 
 img{
     border: 0;
-    vertical-align: top;
     width: 100%;
 }
