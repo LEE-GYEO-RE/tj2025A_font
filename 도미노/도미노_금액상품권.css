@@ -179,15 +179,33 @@ a{
     border-bottom: 2px solid #111;
 }
 
-.menu-nav-wrap ul{
-    display: flex;
+
+.category-bar {
+  display: flex;
+  list-style: none;
+  gap: 0; /* 간격은 ::after에서 조정 */
 }
-.menu-nav>ul>li {
-    list-style: none;
-    display: inline-block;
-    padding: 10px;
-    color: #888888;
+
+
+.category-bar li {
+  position: relative;
+  padding: 0 15px; /* 항목 간 좌우 여백 */
 }
+
+.category-bar li.after::after {
+  content: '|';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ccc;
+  padding-left: 8px;
+}
+
+.category-bar li:last-child::after {
+  content: none; /* 마지막 항목에는 구분자 제거 */
+}
+
 
 
 .dominocon-guide {
@@ -225,11 +243,16 @@ a{
 }
 
 .product-details .title {
-    margin-bottom: 5px;
+    padding-top: 5px;
+    margin-bottom: 10px;
+    height: 40px;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 .product-details .price {
     font-weight: bold;
+    padding-top: 5px;
 }
 
 .quantity-container {
