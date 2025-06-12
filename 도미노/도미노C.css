@@ -1,0 +1,544 @@
+/*
+inner - width 1200px
+img - width 276px, height 276px
+*/
+
+/*==============================공통 CSS==============================*/
+*{  
+    padding: 0px; margin: 0px;
+    box-sizing: border-box;
+}
+li{ list-style: none; }
+a{  
+    text-decoration: none;
+    color: black;
+}
+.headerTop, .mainMenuInner, .footerTopInner, .footerBotInner{
+    width: 1200px;
+    margin: 0 auto;
+}
+select:focus{
+    outline: none;
+}
+/*==============================헤더 CSS==============================*/
+/*==============================헤더 상단 CSS==============================*/
+.headerLogo{
+    background: url(https://cdn.dominos.co.kr/domino/pc/images/sp/sp_common.png);
+    width: 155px;
+    height: 34px;
+}
+.headerMap{
+    width: 345px;
+    height: 27px;
+    text-align: left;
+    border-bottom: 1px solid black;
+    padding-left: 5px;
+    font-size: 15px;
+}
+.headerMap span{
+    height: 16px;
+}
+.headerMap::before{
+    content: "";
+    width: 18px;
+    height: 16px;
+    background: url(https://cdn.dominos.co.kr/domino/pc/images/sp/sp_common.png) -164px 0px no-repeat;
+    display: inline-block;
+    margin-right: 5px;
+}
+.headerTop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0px;
+}
+.headerTop > ul{
+    display: flex;
+    align-items: center;
+}
+.headerLogin li{
+    margin-left: 20px;
+    font-size: 14px;
+    padding: 5px 0px;
+}
+.language{
+    width: 60px;
+    height: 27px;
+    border-radius: 13px;
+    padding-left: 7px;
+    font-size: 12px;
+    border: 1px solid #ddd;
+    color: #888888;
+}
+/*==============================메인 메뉴 CSS==============================*/
+.mainMenu{
+    padding-top: 16px;
+    font-size: 18px;
+    position: sticky;
+    top: 0px;
+    background-color: white;
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    z-index: 50;
+}
+.mainMenuInner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.mainMenuInner > ul{
+    display: flex;
+    justify-content: space-between;
+}
+.mainMenuInner a{ color: black;}
+.mainMenuInner1{
+    padding-right: 90px;
+}
+.mainMenuInner2{
+    padding: 0px 55px;
+}
+
+.mainMenuInner3::after{
+    content: "";
+    margin: 0px 0px 4px 4px;
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    border-style: solid;
+    border-color: black;
+    border-width: 0px 0px 2px 2px;
+    transform: rotate(-45deg);
+}
+/*==============================hover 메뉴 CSS==============================*/
+.mainMenuInner1:hover .mainMenuInner1-1{
+    border-bottom: 2px solid black;
+}
+.mainMenuInner2:hover .mainMenuInner2-1{
+    border-bottom: 2px solid black;
+}
+.subMenuBox a:hover .subMenuBox1-1{
+    border-bottom: 1px solid #555;
+}
+/*==============================푸터 CSS==============================*/
+#footer{
+    border-top: 1px solid #ddd;
+}
+/*==============================푸터 상단 CSS==============================*/
+.footerTopInner{
+    display: flex;
+    justify-content: space-between;
+}
+.footerTop{
+    padding: 52px 0px;
+}
+#footerLogo{
+    display: flex;
+    margin-bottom: 10px;
+}
+#footerLogo span{
+    font-size: 30px;
+    font-weight: bold;
+    padding-left: 13px;
+}
+.footerLogo{
+    background: url(https://cdn.dominos.co.kr/domino/pc/images/sp/sp_common.png);
+    background-position: 0 -47px;
+    width: 123px;
+    height: 30px;
+    margin-top: 5px;
+}
+.footerTopLeft ul{
+    display: flex;
+    padding-bottom: 10px;
+}
+.footerTopLeft ul li a{
+    padding-right: 18px;
+    color: #888888;
+    font-size: 16px;
+}
+.footerTopLeft ul li .footerBlack{
+    color: black;
+}
+.footerTopLeft p{
+    color: #888888;
+    padding-top: 15px;
+    font-size: 12px;
+    line-height: 160%;
+}
+.footerRight1 select{
+    width: 155px;
+    height: 20px;
+    border-top: white;
+    border-right: white;
+    border-left: white;
+    color: #888888;
+}
+.footerRight2{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-left: 5px;
+}
+.footerRight2 span{
+    font-size: 11px;
+    margin-top: 4px;
+}
+.appleIcon{
+    background: url(https://cdn.dominos.co.kr/domino/pc/images/sp/sp_common.png) no-repeat;
+    background-position: -447px 0px;
+    width: 20px;
+    height: 26px;
+}
+.androidIcon{
+    background: url(https://cdn.dominos.co.kr/domino/pc/images/sp/sp_common.png) no-repeat;
+    background-position: -478px 0px;
+    width: 22px;
+    height: 23px;
+    margin-top: 2px;
+}
+.blogIcon{
+    background: url(https://cdn.dominos.co.kr/domino/pc/images/sp/sp_common.png) no-repeat;
+    background-position: -509px 0px;
+    width: 13px;
+    height: 20px;
+}
+.instaIcon{
+    background: url(https://cdn.dominos.co.kr/domino/pc/images/sp/sp_common.png) no-repeat;
+    background-position: -532px 0px;
+    width: 21px;
+    height: 21px;
+}
+.facebookIcon{
+    background: url(https://cdn.dominos.co.kr/domino/pc/images/sp/sp_common.png) no-repeat;
+    background-position: -563px 0px;
+    width: 11px;
+    height: 22px;
+}
+.youtubeIcon{
+    background: url(https://cdn.dominos.co.kr/domino/pc/images/sp/sp_common.png) no-repeat;
+    background-position: -584px 0px;
+    width: 25px;
+    height: 19px;
+}
+.twitterIcon{
+    background: url(https://cdn.dominos.co.kr/domino/pc/images/sp/sp_common.png) no-repeat;
+    background-position: -619px 0px;
+    width: 23px;
+    height: 19px;
+}
+.footerRight3{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 130px;
+    opacity: 0.3;
+}
+/*==============================푸터 하단 CSS==============================*/
+.footerBot{
+    height: 100px;
+    background-color: #f5f5f5;
+    padding: 30px 0px;
+}
+.footerBotInner{
+    height: 40px;
+}
+.footerBotInner ul{
+    display: flex;
+    justify-content: space-between;
+}
+.footerBotInner ul li{
+    display: flex;
+    align-items: center;
+}
+.footerBotInner img{
+    width: auto;
+    height: auto;
+}
+.footerBotInner p{
+    font-size: 10px;
+    color: #888888;
+    padding-left: 10px;
+}
+/*==============================더보기 박스 CSS==============================*/
+.moreBox {
+    position: absolute;
+    top: 56px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    padding: 29px 0 40px;
+    border-top: 1px solid #ddd;
+    background: #fff;
+    display: none;
+}
+.subMenuLeft {
+    display: flex;
+    width: 794px;
+    padding-right: 100px;
+}
+.subMenuBox {
+    width: 178px;
+    margin-right: 70px;
+}
+.subMenuBox a {
+    display: block;
+    padding: 5px 0;
+    font-size: 17px;
+    color: black;
+}
+.subMenuBox ul {
+    margin-top: 10px;
+}
+.subMenuBox li a {
+    display: inline-block;
+    position: relative;
+    font-size: 15px;
+    color: #555;
+}
+.subMenuInner{
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+}
+.subMenuRight {
+    display: inline-block;
+    width: 270px;
+    padding: 22px 0 23px 70px;
+    margin-top: 10px;
+    border-left: 1px solid #ddd;
+    vertical-align: top;
+}
+.subMenuRight a {
+    padding: 8px 0;
+    display: block;
+    width: 270px;
+}
+.subMenuRight ul {
+    margin-top: 16px;
+}
+.subMenuRight li a {
+    color: #888;
+    font-size: 15px;
+}
+.subMenuRight li a::before{
+    content: "-";
+    display: inline-block;
+    padding-right: 2px;
+}
+#hoverBox:hover .moreBox{
+    display: block;
+}
+#hoverBox{
+    width: 120px;
+    height: 40px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
+/* =============== 본문 CSS ================= */
+
+/*======== 컨텐츠1 CSS (본문 맨위 대문사진)============= */
+#content{}
+#H_content1{
+    width: 1920px; height: 495px;
+    background-image: url(https://cdn.evergage.com/promotions/cheongohnetworksfood/domino/9m98f/Nx9Ad.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+}
+
+/* ===============컨텐츠2 CSS============ */
+#H_content2{
+    height: 280px;
+}
+#H_content2>ul{display: flex;
+    justify-content: center;
+    padding-top: 56px;
+}
+#H_content2>ul>li{
+    width: 400px; height: 224px;
+    padding-left: 70px;
+}
+#H_oder1{
+    background-image:url(pizza_img/배달주문.png);
+    background-repeat: no-repeat;
+    width: 52x; height: 38px;
+}
+#H_font1{
+    font-size: 42px;
+    color: #ff143c;
+}
+#H_arrowRed{
+    background-image: url(pizza_img/화살표1.png);
+    background-repeat: no-repeat;
+    width: 30px; height: 30px;
+    background-size: contain;
+    display: inline-block;
+    margin-left: 9px;
+}
+#H_oder2{
+    background-image:url(pizza_img/퀵오더.png);
+    background-repeat: no-repeat;
+    width: 52px; height: 40px;
+}
+#H_font2{
+    font-size: 42px;
+    color: #1382ff;
+}
+#H_arrowBlue{
+    background-image: url(pizza_img/화살표2.png);
+    background-repeat: no-repeat;
+    width: 30px; height: 30px;
+    background-size: contain;
+    display: inline-block;
+    margin-left: 9px;
+}
+#H_oder3{
+    background-image:url(pizza_img/포장주문.png);
+    background-repeat: no-repeat;
+    width: 52px; height: 40px;
+}
+#H_font3{
+    font-size: 42px;
+    color: black;
+}
+#H_arrowBlack{
+    background-image: url(pizza_img/화살표3.png);
+    background-repeat: no-repeat;
+    width: 32px; height: 32px;
+    background-size: contain;
+    display: inline-block;
+    margin-left: 9px;
+}
+.H_gray{
+    font-size: 16px;
+    line-height: 1.5;
+    color: #888;
+    display: inline-block;
+    margin: 17px 0 0;
+}
+
+
+
+
+
+
+/*================ 컨텐츠3 CSS================*/
+
+#H_content3{
+    height: 430px;
+    padding: 110px 0;
+    background-color: #f6f6f6;
+    display: flex;
+    justify-content: center;
+}
+#H_innerL{
+    width: 360px; height: 196px;
+    padding-top: 10px;
+}
+#H_innerL>#H_Ltop{
+    font-size: 28px;
+    padding-bottom: 30px;
+}
+#H_innerL>#H_Ltop #H_blue{
+    font-size: 28px;
+    color: #238ece;
+    font-weight: bold;
+}
+#H_Lbot>a{
+    font-size: 16px;
+    color: #ffffff;
+    width: 103px; height: 43px;
+    background-color: #222;
+    border: 1px solid #222;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#H_innerR{
+    width: 756px; height: 210px;
+    display: flex;
+    justify-content: center;
+}
+#H_Rbox1{
+    width: 210px; height: 210px;
+    margin-right: 6px;
+    background-image: url(https://cdn.dominos.co.kr/domino/pc/images/main/main_card1.png);
+}
+#H_Rbox2{
+    width: 210px; height: 210px;
+    margin-right: 6px;
+    background-image: url(https://cdn.dominos.co.kr/domino/pc/images/main/main_card2.gif);
+}
+#H_Rbox3{
+    width: 210px; height: 210px;
+    margin-right: 6px;
+    background-image: url(https://cdn.dominos.co.kr/domino/pc/images/main/main_card5.png);
+}
+
+
+/* ================컨텐츠4 CSS================= */
+
+#H_content4{
+    height: 561px;
+    padding: 80px 0;
+    border-bottom: 1px solid#dcdcdc;
+}
+#H_C4_inner{
+    display: flex;
+    justify-content: center;
+}
+
+#H_C4_inner>a>#H_C4_box1{
+    width: 324px; height: 401px;
+    background-image: url(https://cdn.dominos.co.kr/admin/upload/banner/20231024_nILoMUXO.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 15px;
+    border: 1px solid #dcdcdc;
+
+}
+#H_C4_inner>a>#H_C4_box2{
+    width: 324px; height: 401px;
+    background-image: url(https://cdn.dominos.co.kr/admin/upload/banner/20220621_Ummq9X16.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 15px;
+    border: 1px solid #dcdcdc;}
+#H_C4_inner>a>#H_C4_box3{
+    width: 324px; height: 401px;
+    background-image: url(https://cdn.dominos.co.kr/admin/upload/banner/20220114_MZKmWb0r.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 15px;
+    border: 1px solid #dcdcdc;
+}
+
+
+
+
+
+/* 팝업 광고창 CSS */
+#popup>img{
+    width: 165px; height: 157px;
+    position: fixed;
+    top:208px;
+    right: 140px;
+    z-index: 2;
+}
+#popup>input{
+    width: 24px; height: 24px;
+    position: fixed;
+    top:208px;
+    right: 140px;
+    z-index: 999;
+    cursor: pointer;
+    background:none;
+    border: none;
+    font-size: 21px;
+    font-weight: bold;
+}
