@@ -184,7 +184,11 @@ else{console.log("재시험");}
 형식으로 출력하세요. 만약 목록에 없는 번호를 입력하면 '없는 상품입니다.'라고
 출력하는 프로그램을 작성하시오.
 */
+// 조건 : (없는 번호) 0~2 사이(범위논리) , num >= 0 && num <= 2
+
 let drinkNames = ['콜라', '사이다', '커피'];
 let drinkPrices = [1000, 1000, 1500];
-let drink = prompt("음료선택 : ")
-if(drinkNames = '콜라'){console.log()}
+let num = Number(prompt("음료선택 : ")) // index 번호 입력받기
+if(num >= 0 && num <= 2){console.log(`선택하신 음료는 ${drinkNames[num]}입니다. 
+                                        가격은 ${drinkPrices[num]}원입니다.`);}
+else{console.log(`없는 상품입니다.`)}
