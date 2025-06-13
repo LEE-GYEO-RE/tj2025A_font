@@ -55,7 +55,7 @@ for( let line = 1 ; line <= 5 ; line++){
     for( let star = 1 ; star <= 5-line+1 ; star++){
         output+= "*" 
     }
-    output += "\n";
+    output += "\n"; // OUTPUT = OUTPUT + "\n"
 } // for 줄
 console.log( output);
 */
@@ -112,6 +112,8 @@ let 행3 = seatLayout[2] ;
 let numbers = [1, 5, 2, 3, 5, 1, 4, 2];
 힌트: 새로운 배열을 만들고, for 반복문으로 기존 배열을 순회하며 새로운 배열에 해당 요소가 없을( .indexOf() == -1 ) 때만 추가(push())합니다.
 */
+
+
 
 /*
 문제 6: 버블 정렬 (Bubble Sort) 구현하기
