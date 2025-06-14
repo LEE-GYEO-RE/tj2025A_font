@@ -19,6 +19,11 @@ a{
 select:focus{
     outline: none;
 }
+.headerLogo{
+    background: url(https://cdn.dominos.co.kr/domino/pc/images/sp/sp_common.png);
+    width: 155px;
+    height: 34px;
+}
 /*==============================헤더 CSS==============================*/
 /*==============================헤더 상단 CSS==============================*/
 .headerLogo{

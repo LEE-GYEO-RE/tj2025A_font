@@ -340,7 +340,7 @@ select:focus{
 /* =============== 본문 CSS ================= */
 
 /*======== 컨텐츠1 CSS (본문 맨위 대문사진)============= */
-#content{}
+
 #H_content1{
     width: 1920px; height: 495px;
     background-image: url(https://cdn.evergage.com/promotions/cheongohnetworksfood/domino/9m98f/Nx9Ad.jpg);
