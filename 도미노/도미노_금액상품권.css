@@ -19,16 +19,12 @@ a{
 select:focus{
     outline: none;
 }
-.headerLogo{
-    background: url(https://cdn.dominos.co.kr/domino/pc/images/sp/sp_common.png);
-    width: 155px;
-    height: 34px;
-}
+
 /*==============================헤더 CSS==============================*/
 /*==============================헤더 상단 CSS==============================*/
 
 .headerLogo{
-    background: url(pizza_img/icons);
+    background: url(https://cdn.dominos.co.kr/domino/pc/images/sp/sp_common.png);
     width: 155px;
     height: 34px;
 }
@@ -47,7 +43,7 @@ select:focus{
     content: "";
     width: 18px;
     height: 16px;
-    background: url(pizza_img/icons) -164px 0px no-repeat;
+    background: url(https://cdn.dominos.co.kr/domino/pc/images/sp/sp_common.png) -164px 0px no-repeat;
     display: inline-block;
     margin-right: 5px;
 }
@@ -370,7 +366,7 @@ img{
     padding-left: 13px;
 }
 .footerLogo{
-    background: url(pizza_img/icons);
+    background: url(https://cdn.dominos.co.kr/domino/pc/images/sp/sp_common.png);
     background-position: 0 -47px;
     width: 123px;
     height: 30px;
@@ -413,44 +409,44 @@ img{
     margin-top: 4px;
 }
 .appleIcon{
-    background: url(pizza_img/icons) no-repeat;
+    background: url(https://cdn.dominos.co.kr/domino/pc/images/sp/sp_common.png) no-repeat;
     background-position: -447px 0px;
     width: 20px;
     height: 26px;
 }
 .androidIcon{
-    background: url(pizza_img/icons) no-repeat;
+    background: url(https://cdn.dominos.co.kr/domino/pc/images/sp/sp_common.png) no-repeat;
     background-position: -478px 0px;
     width: 22px;
     height: 23px;
     margin-top: 2px;
 }
 .blogIcon{
-    background: url(pizza_img/icons) no-repeat;
+    background: url(https://cdn.dominos.co.kr/domino/pc/images/sp/sp_common.png) no-repeat;
     background-position: -509px 0px;
     width: 13px;
     height: 20px;
 }
 .instaIcon{
-    background: url(pizza_img/icons) no-repeat;
+    background: url(https://cdn.dominos.co.kr/domino/pc/images/sp/sp_common.png) no-repeat;
     background-position: -532px 0px;
     width: 21px;
     height: 21px;
 }
 .facebookIcon{
-    background: url(pizza_img/icons) no-repeat;
+    background: url(https://cdn.dominos.co.kr/domino/pc/images/sp/sp_common.png) no-repeat;
     background-position: -563px 0px;
     width: 11px;
     height: 22px;
 }
 .youtubeIcon{
-    background: url(pizza_img/icons) no-repeat;
+    background: url(https://cdn.dominos.co.kr/domino/pc/images/sp/sp_common.png) no-repeat;
     background-position: -584px 0px;
     width: 25px;
     height: 19px;
 }
 .twitterIcon{
-    background: url(pizza_img/icons) no-repeat;
+    background: url(https://cdn.dominos.co.kr/domino/pc/images/sp/sp_common.png) no-repeat;
     background-position: -619px 0px;
     width: 23px;
     height: 19px;
