@@ -32,17 +32,24 @@ const members = [
   { id: 'user2', password: 'pass2', name: '사용자2' },
 ];
 */
+/*
 let id = prompt(" 아이디 :" );
 let password = prompt(" 비밀번호 : ");
 let name = prompt(" 이름 : " );
+const member = { id , password , name };
 const members = [
   { id: 'user1', password: 'pass1', name: '사용자1' },
   { id: 'user2', password: 'pass2', name: '사용자2' },
 ];
-for ( index = 0 ; index <= members.length -1 ; index++) {
-    console.log(" 존재하는 아이디 입니다. ")
-} 
-
+if( id == 'user1'){
+  console.log(" 존재하는 아이디 입니다.");
+}
+if( id == 'user2'){
+  console.log(" 존재하는 아이디 입니다.");
+}
+else{ members.push(member)};    // 기존 배열에 저장
+console.log( members );
+*/
 
 
 
@@ -54,15 +61,58 @@ const scores = [
   { name: 'B', math: 95, science: 88 },
   { name: 'C', math: 76, science: 78 }
 ];
+*/
+/*
+const scores = [
+  { name: 'A', math: 80, science: 92 },
+  { name: 'B', math: 95, science: 88 },
+  { name: 'C', math: 76, science: 78 }
+];
+let total = 0;
+for( let index =0; index < scores.length ; index++){
+  total +=scores[index].math;
+}
+const avg = Number(total / scores.length);
+console.log(" 수학 점수 평균 : " , avg );
+*/
 
+/*
 문제 4: 특정 조건을 만족하는 객체 찾기
-products 배열에서 id가 3인 상품 객체를 찾아, 해당 객체 전체를 콘솔에 출력하시오. 일치하는 객체가 없으면 "상품을 찾을 수 없습니다."를 출력합니다.
+products 배열에서 id가 3인 상품 객체를 찾아, 해당 객체 전체를 콘솔에 출력하시오. 
+일치하는 객체가 없으면 "상품을 찾을 수 없습니다."를 출력합니다.
 const products = [
   { id: 1, name: '사과' },
   { id: 2, name: '바나나' },
   { id: 3, name: '포도' },
   { id: 4, name: '딸기' }
 ];
+*/
+const products = [
+  { id: 1, name: '사과' },
+  { id: 2, name: '바나나' },
+  { id: 3, name: '포도' },
+  { id: 4, name: '딸기' }
+];
+
+let foundProduct = null;
+
+// 반복문으로 id가 3인 상품 찾기
+for (let i = 0; i < products.length; i++) {
+  if (products[i].id === 3) {
+    foundProduct = products[i];
+    break;
+  }
+}
+// 결과 출력
+if (foundProduct) {
+  console.log(foundProduct);
+} else {
+  console.log("상품을 찾을 수 없습니다.");
+}
+
+
+
+/*
 문제 5: 객체 배열 필터링하기
 users 배열에서 isActive가 true인 사용자들만으로 구성된 새로운 배열 activeUsers를 만들고, 이 배열을 콘솔에 출력하시오.
 const users = [

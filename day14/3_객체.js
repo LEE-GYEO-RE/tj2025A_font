@@ -35,3 +35,5 @@
         * 1(식별코드) : 중복없는 데이터.  == 사번, 학번, 주민등록번호, 제품번호 등등..
     =======================================================> 데이터베이스 정규화
 */
+
+5. [실습7] 스프레드시트 링크 : https://docs.google.com/spreadsheets/d/1-0HXHV_1V_XhsvsPiUyVKtvFxDIQhJ4k3mPR45rMmhs/edit?usp=sharing
