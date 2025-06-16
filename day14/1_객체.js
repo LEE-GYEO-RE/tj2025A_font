@@ -71,4 +71,4 @@ for( let index = 0 ; index <= 제품목록.length -1 ; index++){
     const product = 제품목록[index];    // index 번째의 제품(객체)
     console.log( product.제품명 );      // index 번째의 제품의 속성값 호출
     console.log( product['가격'])
-}   //-------> 인덱스 요소 계속 순회해서 껍질까서 호출하는 중
+}   //-------> 인덱스 요소 계속 순회해서 호출하는 중
