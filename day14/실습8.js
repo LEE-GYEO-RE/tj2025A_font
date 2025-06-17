@@ -50,6 +50,8 @@ if( id == 'user2'){
 else{ members.push(member)};    // 기존 배열에 저장
 console.log( members );
 */
+
+/*  -----문제 2. 강사님 코드------
 const members = [ 
     { id: 'user1', password: 'pass1', name: '사용자1' },
     { id: 'user2', password: 'pass2', name: '사용자2' },
@@ -108,6 +110,14 @@ for( let index =0; index < scores.length ; index++){
 const avg = Number(total / scores.length);
 console.log(" 수학 점수 평균 : " , avg );
 */
+/*----- 문제3 강사님 코드
+let sum = 0 ; // 객체들의 math(수학점수)를 *누적*합계를 저장하기 위한 변수.
+for( let index = 0 ; index <= scores.length -1 ; index++){  // 0부터 마지막 인덱스까지 1씩 증가
+    let 학생객체 = scores[ index ]; // index번재 학생객체 호출
+    sum += 학생객체.math; // index번째 학생객체의 수학점수 속성 값 호출하여 sum에 누적합계
+} // for end
+console.log( sum / scores.length ); // 합계 / 3 (배열길 = 객체개수 = 인원수)
+*/
 
 /*
 문제 4: 특정 조건을 만족하는 객체 찾기
@@ -120,6 +130,7 @@ const products = [
   { id: 4, name: '딸기' }
 ];
 */
+/*
 const products = [
   { id: 1, name: '사과' },
   { id: 2, name: '바나나' },
@@ -142,7 +153,20 @@ if (foundProduct) {
 } else {
   console.log("상품을 찾을 수 없습니다.");
 }
-
+*/
+/*-------강사님 코드----
+const products = [ { id: 1, name: '사과' },{ id: 2, name: '바나나' },{ id: 3, name: '포도' }, { id: 4, name: '딸기' } ];
+let idCheck = false; // id가 3인 찾았다(true)/못찾았다(false) 저장하는 변수
+for( let index = 0 ; index <= products.length - 1 ; index++ ){
+    let 과일객체 = products[index]; // index번째의 과일객체 꺼내기(호출)
+    if( 과일객체.id == 3 ){
+        idCheck = true;// 찾았다. 목표 이뤘다. 굳이 뒤에 인덱스 확인해야할까? break
+        console.log( 과일객체 );
+        break; // 반목문 종료 
+    }  // * 모두 조회(for모두 실행)를 하고 나서 찾았다/못찾았다 판단!!!!
+} // for end 
+if( idCheck == false ){ console.log("상품을 찾을 수 없습니다."); }
+*/
 
 
 /*
@@ -154,16 +178,44 @@ const users = [
   { id: 3, name: '유저3', isActive: true },
   { id: 4, name: '유저4', isActive: false }
 ];
+*/
+const users = [
+  { id: 1, name: '유저1', isActive: true },
+  { id: 2, name: '유저2', isActive: false },
+  { id: 3, name: '유저3', isActive: true },
+  { id: 4, name: '유저4', isActive: false }
+];
+const activeUsers = [ ] ;
+for( let index = 0 ; index <= users.length-1 ; index++){
+    if( users[index].isActive == true ){
+      activeUsers.push( users[index]);
+  }
+} console.log( activeUsers);
 
+
+/*
 문제 6: 객체 배열 데이터 변환하기
-movies 배열에 있는 각 영화 객체에서 title 속성만 추출하여, 영화 제목들로만 이루어진 새로운 배열 movieTitles를 만들고 콘솔에 출력하시오.
+movies 배열에 있는 각 영화 객체에서 title 속성만 추출하여, 
+영화 제목들로만 이루어진 새로운 배열 movieTitles를 만들고 콘솔에 출력하시오.
 const movies = [
   { title: '인셉션', director: '크리스토퍼 놀란' },
   { title: '기생충', director: '봉준호' },
   { title: '매트릭스', director: '워쇼스키 자매' }
 ];
+*/
+const movies = [
+  { title: '인셉션', director: '크리스토퍼 놀란' },
+  { title: '기생충', director: '봉준호' },
+  { title: '매트릭스', director: '워쇼스키 자매' }
+];
+const movieTitles = [] ;
+for( let index = 0 ; index <= movies.length -1 ; index++){
+  movieTitles.push( movies[index].title );
+}
+console.log( movieTitles );
 
 
+/*
 문제 7: 데이터 그룹화하기
 다음 team 배열을 department를 기준으로 그룹화하여, 아래 result와 같은 형태로 만드시오.
 const team = [
@@ -177,7 +229,51 @@ const team = [
 //   '개발팀': ['철수', '민수'],
 //   '기획팀': ['영희', '지혜']
 // }
+*/
+// (방법 1)
+// let result = 빈 배열 2개를 갖는 객체생성
+// 팀 변수에서 개발팀, 기획팀 비교
+// 객체가 '개발팀'이면 result.개발팀에 이름 push
+// 객체가 '기획팀'이면 result.기획팀에 이름 push
 
+const team = [
+  { name: '철수', department: '개발팀' },
+  { name: '영희', department: '기획팀' },
+  { name: '민수', department: '개발팀' },
+  { name: '지혜', department: '기획팀' }
+];
+const result = { '개발팀' : [] , '기획팀' : [] };
+for( let i = 0 ; i <= team.length -1 ; i++){
+  let j = team[i] ;
+  if( j.department == '개발팀'){ 
+    result.개발팀.push(j.name);}
+  else if( j.department == '기획팀'){ 
+    result.기획팀.push(j.name);
+  }
+} // for end
+console.log(result);
+
+// (방법 2)
+// 미리 부서명 배열에 정의 하지 않고 객체 생성
+// result2 에 index번째의 부서명 존재하면 true / 존재하지 않으면 false
+// 부서명 배열에 index번째 이름 넣어준다.
+// 존재하지 않으면 새로운 배열 생성하고 초기값으로 index번재 이름 넣어준다.
+// 배열 생성
+let result2 = { };
+for( let index = 0 ; index <= team.length -1 ; index++){
+  let t = team[index];
+  if( result2[ t.department ]){
+    result2[ t.department ].push( t.name );
+  }else{
+    result2[ t.department ] = [ t.name ];
+  }
+}
+console.log( result2 );
+
+
+
+
+/*
 문제 8: 장바구니 총액 계산하기
 고객의 장바구니 정보를 담은 cart 배열과 상품 정보를 담은 productsInfo 배열이 있습니다.
 cart 배열: 각 요소는 고객이 담은 상품의 id와 quantity(수량)를 가집니다.
