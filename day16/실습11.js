@@ -17,7 +17,7 @@ let isAdult1 = isAdult(25);
 let isAdult2 = isAdult(17);
 console.log(isAdult1, isAdult2);
 // 함수 호출2
-console.log( isAdult(17) , isAdult(25));
+console.log(isAdult(17), isAdult(25));
 
 /*
 실습 2: 배열의 총합 구하기
@@ -53,26 +53,37 @@ const words = ['apple', 'banana', 'kiwi', 'strawberry'];
 // (2) 반환값        : 배열 내 가장 긴 단어
 // (3) 처리할 명령어(로직) : for 반복문을 사용해 가장 긴 단어를 찾아
 const words = ['apple', 'banana', 'kiwi', 'strawberry'];
-function findLongestWord(long){
+function findLongestWord(long) {
     let longword = ''; // 가장 긴 단어를 저장하는 변수를 임의 선언
-    for( let i = 0; i <= long.length -1 ; i++){
+    for (let i = 0; i <= long.length - 1; i++) {
         let word = long[i];
-        if( word.length > longword.length ){ longword = word; }
+        if (word.length > longword.length) { longword = word; }
     }
     return longword; // 함수가 종료되면서 함수를 호출했던 곳으로 반환하는 값
 }
-let result = findLongestWord( words );
-console.log( result );
+let result = findLongestWord(words);
+console.log(result);
 
 /*
 실습 4: 게임 점수 관리하기
 let userScore = 0; 전역 변수를 만드세요. 
-gainScore() 함수는 userScore를 10 증가시키고, loseScore() 함수는 5 감소시킵니다.
+gainScore() 함수는 userScore를 10 증가시키고, 
+loseScore() 함수는 userScore를 5 감소시킵니다.
 gainScore()를 세 번, loseScore()를 한 번 호출한 뒤, 최종 점수를 콘솔에 출력하세요.
 */
-// (1) 매개변수      : 
-// (2) 반환값        : 배열 내 가장 긴 단어
-// (3) 처리할 명령어(로직) : for 반복문을 사용해 가장 긴 단어를 찾아
+// (1) 매개변수      : x
+// (2) 반환값        : x
+// (3) 처리할 명령어(로직) : 전역변수(userScore)를 gainScore() 10증가 , loseScore() 5감소
+let userScore = 0;
+function gainScore() { userScore += 10; }
+function loseScore() { userScore -= 5; }
+gainScore();
+gainScore();
+gainScore();
+loseScore();
+console.log(userScore);
+
+
 
 
 /*
@@ -85,6 +96,23 @@ const students = [
   { name: '박민준', score: 78 }
 ];
 */
+const students = [
+    { name: '김철수', score: 85 },
+    { name: '이영희', score: 92 },
+    { name: '박민준', score: 78 }
+];
+let Topscore = '';
+let Topname = '';
+function findTopStudent(array) {
+    for (let index = 0; index <= array.length - 1; index++) {
+        let score = array[index];
+        if 미치겠다 {
+            return `${students.name}`;
+        }
+    }
+}
+let result2 = findTopStudent(students);
+console.log( result2 );
 
 
 /*
