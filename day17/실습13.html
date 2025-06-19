@@ -4,7 +4,35 @@
     <meta charset='utf-8'>
 </head>
 <body>
-    
+    <h1> 미니 전화번호부 페이지 </h1>
+    <!-- 연락처 등록 영역 -->
+    이름 : <input id="nameInput" type="text"/> <br />
+    전화번호 : <input id="numberInput" type="text" /> <br />
+    메모 : <input id="textInput" type="text" /> <br />
+    <button onclick="func1()"> 등록 </button>
+
+
+
+
+    <!-- 연락처 목록 영역 -->
+     <table border="1">
+        <thead>
+            <tr>
+                <th> 이름 </th>
+                <th> 전화번호 </th>
+                <th> 메모 </th>
+            </tr>
+        </thead>
+
+        <tbody id="textOuput">
+            <tr>
+                <th> 홍길동 </th>
+                <th> 010-1234-5678 </th>
+                <th> OO회사 부장 </th>
+            </tr>
+        </tbody>
+     </table>
+
     <script src="실습13.js"></script>
 </body>
 </html>
