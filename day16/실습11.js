@@ -136,22 +136,28 @@ const students = [
   { name: '박민준', score: 78 }
 ];
 */
+// (1) 매개변수             : x
+// (2) 반환값               : 가장 높은 점수
+// (3) 처리할 명령어(로직)   : 가장 높은 점수(score)를 가진 학생의 이름을 찾아 *for문*
+// * 전역변수 
 const students = [
     { name: '김철수', score: 85 },
     { name: '이영희', score: 92 },
     { name: '박민준', score: 78 }
 ];
-let Topscore = '';
-let Topname = '';
-function findTopStudent(array) {
-    for (let index = 0; index <= array.length - 1; index++) {
-        let score = array[index];
-        if 미치겠다 {
-            return `${students.name}`;
+function findTopStudent() {
+    let Topscore = 0;
+    let Topname = '';
+    for ( let index = 0; index <= students.length - 1; index++) {
+        let student = students[index];
+        if( student.score > Topscore ) {
+            Topscore = student.score;
+            Topname = student.name;
         }
     }
+    return Topname;
 }
-let result2 = findTopStudent(students);
+let result2 = findTopStudent();
 console.log( result2 );
 
 

@@ -277,3 +277,5 @@
         console.log( index ); // for 안에서 선언된 index 변수이므로 호출 '불가능'
         console.log( B ); // for 안에서 선언된 B 변수 이므로 호출 '불가능'
         console.log( A ); // for 밖에서 선언되서 호출 '가능'
+
+[ 함수 ]
