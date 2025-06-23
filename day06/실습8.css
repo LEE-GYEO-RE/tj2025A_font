@@ -1,8 +1,4 @@
-
-*{
-    border: 1px solid red
-}
-.title{
+.title {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -10,32 +6,40 @@
     width: 1280px;
 }
 
-.title > .top-menu{
+.title>.top-menu {
     display: flex;
-    justify-content: flex-end; /*가로 정렬*/
+    justify-content: flex-end;
+    /*가로 정렬*/
     margin: 5px 5px;
     padding: 5px 5px;
 }
 
-.logo{
+.logo {
     display: flex;
-    justify-content: flex-end; /*가로 정렬*/
+    justify-content: flex-end;
+    /*가로 정렬*/
 }
-.title > .logo > .title-logo{
+
+.title>.logo>.title-logo {
     color: blue;
 }
-.title > .logo{
+
+.title>.logo {
     font-size: 30px;
-    margin: 20px ; padding: 10px;
+    margin: 20px;
+    padding: 10px;
 }
-.menu-list{
+
+.menu-list {
     margin: 5px 5px;
     padding: 5px 5px;
 }
-#main-img > img{
+
+#main-img>img {
     width: 100%;
 }
-#content{
+
+#content {
     display: flex;
     margin: 0 auto;
     width: 1280px;
