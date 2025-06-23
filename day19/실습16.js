@@ -33,29 +33,49 @@
         --일치하는 정보를 찾지 못하면, "동일한 회원정보가 없습니다. 로그인실패" 알림창을 띄웁니다.
 */
 
-// =================== (1) 데이터 구성 ================ //
+// =================== (1) 데이터 구성  , 전역변수 대신에  sesseionStorge 사용 ================ //
 
 
-const memberList = [ 
-    { no : 1 , id : 'qwe' , pw : 'qwer' },
-    { no : 1 , id : 'qwe' , pw : 'qwer' } 
-];
+// const memberList = [ 
+//     { no : 1 , id : 'qwe' , pw : 'qwer' },
+//     { no : 1 , id : 'qwe' , pw : 'qwer' } 
+// ];
 
 
 // =================== (2) 회원가입 함수 ================ //
 function signup(){  console.log( '---> signup exe ')
+
     // 1. 입력마크업 객체 가져오기
     const signId = document.querySelector('.signId');   console.log( signId );
     const signPw = document.querySelector('.signPw');    console.log( signPw );
+
     // 2. 입력마크업 객체 내 입력값 가져오기
     const id = signId.value;                            console.log( id );
     const pw = signPw.value;                            console.log( pw );
+
     // 3. 객체화
-    const no = memberList[ memberList.length -1 ].no + 1 ;      // 배열 내 마지막 인덱스의 회원번호 +1
+    let no = 1; // 회원번호 초기값
+        // ================ sessionStorge 에서 memberList 가져오기 ============ //
+        // (1) sessionStorge 에서 memberList 가져오기
+        let memberList = sessionStorage.getItem( 'memberList' ); // getItem('속성명/key')
+        // (2) 존재하지 않으면 (배열) 새로 생성 , 존재하면 타입변환
+        if ( memberList == null ){ // 해당 속성명(memberList)이 존재하지 않으면
+            memberList = [];        // 새로운 배열 생성
+            // no(회원번호) 그대로 1 사용한다.
+        }else{                     // 존재하면 JSON(배열타입)으로 변환하기.
+            memberList = JSON.parse( memberList );
+            no = memberList[ memberList.length -1 ].no + 1 ;    // 배열 내 마지막 인덱스의 회원번호 +1
+        }
     const obj = { no : no , id : id , pw : pw};           console.log( obj );
+
     // 4. 배열 저장
     memberList.push( obj );                             console.log( memberList );
     alert('회원 등록 성공') // 알림
+        // ============ sessionStorge 에서 memberList 저장하기 ============= //
+        // (1) 배열 타입을 JSON 문자열 타입으로 변환
+        let jsonData = JSON.stringify( memberList );
+        // (2) sessionStorage 에 memberList 속성명으로 배열 저장하기
+        sessionStorage.setItem( 'memberList' , jsonData ); // 'memberList' 라는 이름(아무거나)으로 jsonData 변수값 저장
 } // func end
 
 // =================== (3) 로그인 함수 ================== //
@@ -63,8 +83,16 @@ function login(){   console.log('--> login exe ')
     // 1. 입력마크업 객체 가져오기
     // 2. 입력마크업 객체내 입력값 가져오기
     // 3. 기존배열(회원목록)내 입력받은 값과 일치한 정보 찾기(비교) , <for> 문
-    const loginId = document.querySelector('.loginId').value;    console.log( loginId );
-    const loginPw = document.querySelector('.loginPw').value;    console.log( loginPw );
+    const loginId = document.querySelector('.loginId');   console.log( loginId );
+    const loginPw = document.querySelector('.loginPw');    console.log( loginPw );
+    const id = loginId.value
+    const pw = loginPw.value
+
+        // ================ sessionStorge 에서 memberList 가져오기 ============ //
+        let memberList = sessionStorage.getItem('memberList'); // 'memberList' 이름의 속성값 가져오기
+        if( memberList == null ){ memberList = [];}
+        else{ memberList = JSON.parse( memberList ); }
+        
     for( let index = 0 ; index <= memberList.length -1 ; index++){
         const member = memberList[index]; 
         if( member.id == id && member.pw == pw ){
