@@ -57,15 +57,22 @@ console.log(`result : ${result}`)
 80점 이상 90점 미만: 'B'
 70점 미만: 'C'
 */
+/*
 let score = prompt("점수 : ");
 let result = score >= 90 ? 'A'  : score < 90 && score >= 80 ? 'B' : score < 70 ? 'C' : 'F';
 console.log(`result : ${result}`);
 document.write(`<h2>${result}</h2>`)
-
+*/
 /*
 문제 7: 청년 할인 이벤트 대상 확인
 나이를 prompt로 입력받아, 20대 (20세 이상 그리고 29세 이하)에 해당하는 경우 "이벤트 대상입니다."를,
  그렇지 않으면 "이벤트 대상이 아닙니다."를 콘솔에 출력하는 프로그램을 작성하시오.
+*/
+/*
+let age = prompt("나이를 입력하세요 : ");
+if( age >= 20 && age <= 29){
+    console.log(" 이벤트 대상입니다.");
+}else{ console.log(" 이벤트 대상이 아닙니다. ");}
 */
 
 /*
@@ -74,6 +81,11 @@ document.write(`<h2>${result}</h2>`)
 증감 연산자(++)를 사용하여 변수의 값을 1 증가시킨 뒤, 
 "좋아요: [숫자]" 형식으로 새로운 '좋아요' 수를 콘솔에 출력하는 코드를 작성하시오.
 let likeCount = 3;
+*/
+/*
+let likeCount = 3;
+let result = ++likeCount 
+console.log(`좋아요 : ${[result]}`);
 */
 
 /*
@@ -84,6 +96,12 @@ prompt를 사용하여 새로운 할 일을 입력받아 배열의 마지막에 
 초기 배열: let todoList = ['장보기', '과제하기'];
 힌트: 배열에 요소를 추가할 때는 .push() 메소드를 사용합니다.
 */
+/*
+let todoList = ['장보기', '과제하기'];
+let newtodo = prompt("새로운 할일을 입력하세요 : ");
+todoList.push(newtodo);
+console.log(todoList);
+*/
 
 /*
 문제 10: 대기열의 마지막 사람 확인하기
@@ -93,4 +111,7 @@ prompt를 사용하여 새로운 할 일을 입력받아 배열의 마지막에 
 초기 배열: let waitingList = ['김민준', '이서연', '박도윤', '최지우'];
 힌트: 배열의 마지막 요소 인덱스는 배열.length - 1 입니다.
 */
-여기 해야됨
+let waitingList = ['김민준', '이서연', '박도윤', '최지우'];
+let index = 0 ; index <= waitingList.length -1 ; index++
+let lastName = waitingList[3];
+console.log(`마지막 대기자는 ${lastName}`);
