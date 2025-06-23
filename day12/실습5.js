@@ -63,23 +63,50 @@ else{console.log(price);}
 겨울: 12, 1, 2월
 만약 1~12 이외의 숫자를 입력하면 '잘못된 월입니다.'를 출력하세요.
 */
-
-
-
-
+/*
+let Month = Number(prompt("1월부터 12월까지 골라 입력하세요 : "));
+if( Month < 6 && Month > 2 ){
+    console.log("봄")
+}else if( Month < 9 && Month > 5){
+    console.log("여름")
+}else if( Month < 12 && Month > 8){
+    console.log("가을")
+}else{
+    console.log("겨울")
+}
+*/
 
 /*
 문제 5: 세 수 중 가장 큰 수 찾기
 서로 다른 세 개의 정수를 입력받아, 가장 큰 수를 출력하는 프로그램을 작성하시오.
+*/
+/*
+let Number1 = parseInt(prompt(" 첫번쨰 숫자를 입력하세요 : "));
+let Number2 = parseInt(prompt(" 두번쨰 숫자를 입력하세요 : "));
+let Number3 = parseInt(prompt(" 세번쨰 숫자를 입력하세요 : "));
 
--------------------------------------------------------------------------------------------------
+if( Number1 > Number2 && Number1 > Number3){
+    console.log(Number1);
+}
+else if( Number2 > Number1 && Number2 > Number3){
+    console.log(Number2);
+}else{ console.log(Number3);}
+*/
 
+/*
 문제 6: 윤년 판별기
 사용자로부터 연도(year)를 입력받아 해당 연도가 윤년인지 평년인지 판별하는 프로그램을 작성하시오.
 윤년 조건:
 연도가 4의 배수이면서, 100의 배수는 아닐 때
 또는 연도가 400의 배수일 때
 출력 예시: '2024년은 윤년입니다.' 또는 '2023년은 평년입니다.'
+*/
+/*
+let year = Number(prompt("연도를 입력하세요 : "));
+if( year % 4 == 0 && year % 100 !== 0 && year || 400 === 0){
+    console.log(`${year}년은 윤년입니다.`);
+}else{ console.log(`${year}년은 평년입니다.`);}
+*/
 
 /*
 문제 7: 세 수 오름차순 정렬
@@ -102,7 +129,7 @@ let numArray = [ num1 , num2 , num3 ]
 
 // (5) 조건  : num1 > num2 , num1 > num3 , num2 > num3  (3번) // 현재 코드 기준, 내림차순 하려면 부등호 반대
 let temp;       // 임시변수 선언
-if( numArray[0] > numArray[1]){         // 첫번째 갑싱 두번째 값보다 크면  (스왑 / 교체)
+if( numArray[0] > numArray[1]){         // 첫번째 값이 두번째 값보다 크면  (스왑 / 교체)
     temp = numArray[0];                 // 임시변수에 첫번째 값 넣고
     numArray[0] = numArray[1];          // 첫번째 위치에 두번째 값 넣고
     numArray[1] = temp;                 // 두번째 위치에 임시변수(첫번째 값) 값 넣고
@@ -137,7 +164,7 @@ console.log(numArray); // 정렬 결과
     비기는수 : 가위 = 가위 , 바위 = 바위 , 보 = 보  / 0 = 0 , 1 = 1 , 2 = 2 , 두 값이 같다.
     지는수 : 가위 = 바위 , 바위 = 보 , 보 = 가위    / 0 = 1 , 1 = 2 , 2 = 0
 */
-
+/*
 let player1 = Number(prompt(" 0 1 2 입력 : "));
 let player2 = Number(prompt(" 0 1 2 입력 : "));
 // (방법1 : 모든 경우의 수 판단)
@@ -156,15 +183,32 @@ else{console.log("플레이어2 승리");}    // (그외) 플레이어2 이기�
 if( player1 == player2){console.log("무승부");}
 else if( player1 == (player2+ 1)%3 ){  console.log("플레이어1 승리");}     // 플레이어1 이기는 수
 else{console.log("플레이어2 승리");}    // (그외) 플레이어2 이기는 수
+*/
 
 /*
 문제 9: 주차 차량 위치 검색
 주차장 차량 정보가 다음과 같이 두 개의 배열로 관리되고 있습니다. 두 배열에서 같은 인덱스는 동일한 차량의 정보를 의미합니다.
 차량 번호 목록: let carArray = [ '250어7142', '142가7415', '888호8888' ];
 주차 위치 목록: let locationArray = [ 'A1', 'B3', 'C2' ];
-사용자로부터 차량 번호를 입력받아, carArray에서 해당 차량을 찾은 뒤 locationArray에 있는 그 차량의 주차 위치를 찾아 출력하는 프로그램을 작성하시오. 만약 해당하는 차량 번호가 없다면 '차량이 존재하지 않습니다.'를 출력하시오.
+사용자로부터 차량 번호를 입력받아, 
+carArray에서 해당 차량을 찾은 뒤 locationArray에 있는 그 차량의 주차 위치를 찾아 출력하는 프로그램을 작성하시오. 
+만약 해당하는 차량 번호가 없다면 '차량이 존재하지 않습니다.'를 출력하시오.
+*/
+/*
+let carArray = ['250어7142', '142가7415', '888호8888'];
+let locationArray = ['A1', 'B3', 'C2'];
+
+let userCar = prompt("차량 번호를 입력하세요 : ");
+let index = carArray.indexOf(userCar);
+
+if( index !== -1){
+    let location = locationArray[index];
+    console.log(`${userCar} 차량의 주자 위치는 ${location} 입니다.`)
+}else{ console.log("차량이 존재하지 않습니다.")}
+*/
 
 
+/*
 문제 10: 수강 신청 목록에서 과목 제외하기
 현재 수강 신청한 과목 목록이 배열로 주어져 있습니다.
 let courseList = ['수학', '영어', '과학', '국어'];
@@ -172,5 +216,14 @@ let courseList = ['수학', '영어', '과학', '국어'];
 courseList에 해당 과목이 존재하면 목록에서 삭제한 뒤 변경된 배열 전체를 출력하세요. 
 만약 존재하지 않는 과목이면 '해당 과목은 신청 목록에 없습니다.'를 출력하는 프로그램을 작성하시오.
 */
+let courseList = ['수학', '영어', '과학', '국어'];
+let deletList = prompt("삭제하고 싶은 과목을 입력하세요 : ");
 
-여기도 해야됨
+let index = courseList.indexOf(deletList);
+
+if( index !== -1 ){
+    courseList.splice(index , 1);
+    console.log(courseList);
+}else{
+    console.log("해당 과목은 신청목록에 없습니다.");
+}
