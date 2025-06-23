@@ -36,4 +36,58 @@
 
 // 데이터 모델링
 
+// 1. HTML/CSS 만들기
+// 2. 데이터 모델링
+// 3. 함수 설계
+// 4. 로직 작성
+// 5. HTML/CSS <---->함수 연동
+
+
+// 1. 데이터 모델링
+const list = [
+    { code : 1 , name : '홍길동' , phone : '010-1234-5678' , text : 'OO회사 부장' }
+];
+console.log(list) ;
+
+// 2. 함수 설계
+// (1) 등록함수 정의 , 실행 : 등록버튼 onclick 했을때.
+
+function func1(){ console.log('--- func1 exe ---');
+    // input 마크업 객체에서 입력값(value) 가져오기
+    // value = 무조건 문자열로 들어감 , 숫자로 나오게 하려면 documnet 앞에 Number 써야함.
+    const nameInput = document.querySelector('#nameInput').value
+    console.log(nameInput);
+    const numberInput = document.querySelector('#numberInput').value
+    console.log(numberInput);
+    const textInput = document.querySelector('#textInput').value
+    console.log(textInput);
+    // 원하는 속성구성으로 객체 만들기.
+    const obj = { code : 2 , name : nameInput , phone : numberInput , text : textInput };
+    console.log( obj );
+    list.push(obj);
+    console.log(list);
+    // 출력함수 재호출
+    func2(); // 성공 할때마다 
+} // func end
+
+// (2) 전체조회함수 , 실행 : JS열렸을 때 최초 1번 , 등록 성공했을 때( func1 에 대입 ) 
+func2(); // 최초 1번 실행
+function func2(){ console.log('--- func2 exe ---');
+    // <tbody id = "textBody"> 마크업 객체 가져오기 (여기에)
+    const textOutput= document.querySelector('#textOutput');
+    console.log(textOutput);
+    // 1. list의 객체 정보를 html 형식으로 표현
+    let html = '';
+        // 1-1. list의 code , date , text , number  가져오기
+    for ( let t = 0 ; t<= list.length -1 ; t++ ){
+        const listname = list[t];
+        html += `<tr> 
+                    <td>${listname.name}</td>
+                    <td>${listname.phone}</td>
+                    <td>${listname.text}</td>        
+                </tr>`
+    } // for end
+    // 출력 , innerHTML
+    textOutput.innerHTML = html ; // 누적 HTML
+} // func end
 
