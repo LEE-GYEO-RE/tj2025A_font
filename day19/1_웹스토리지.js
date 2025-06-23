@@ -35,6 +35,16 @@
         1. 사용법
             (1) JSON.stringify( 자료 );     : 해당 자료를 문자열 타입으로 반환
             (2) JSON.parse( 자료 );         : 해당 자료를 JS 타입으로 반환
+
+    *************************
+    '속성명/key' = 임의의 속성명 값 = 아무거나 
+    ('속성명' , 변수 )내가 정한 '속성명' 에 변수 저장
+    sessionStorage 또는 localStorge에 '속성명' 자료 저장/호출/삭제
+    저장 : .setItem()
+    호출 : .getItem()
+    삭제 : .removeItem()
+    전체삭제 : .clear()
+
  */
 // [1] 웹스토리지 를 제어하는 객체
 console.log( sessionStorage );  // 현재 웹스토리지에 저장된 자료 갖는 객체 반환
