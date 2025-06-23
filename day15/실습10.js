@@ -85,3 +85,5 @@ document.write(html);
          console.log( 과목.과목명)
      }
  } */
+
+     
