@@ -41,7 +41,7 @@
     // (3) 객체화 시키기
         // - localStorge 에서 waitingList 가져오기
         // - 존재하지 않으면 배열 새로 생성 , 존재하면 타입변환
-    // (4) 배열 저장
+    // (4) 배열에 객체 저장
         // - localStorge 에서 waitingList 저장하기
         // - 배열 타입을 JSON 문자열 타입으로 변환
         // - localStorge 에 waitingList 속성명으로 배열 저장하기
