@@ -4,6 +4,14 @@
 주어진 숫자 배열에서 가장 큰 값을 찾아 콘솔에 출력하는 프로그램을 작성하시오. (단, Math.max() 함수 사용 금지)
 let numbers = [23, 5, 67, 12, 88, 34];
 */
+let max = 0;
+let numbers = [23, 5, 67, 12, 88, 34];
+for( let index = 0 ; index <= numbers.length-1; index++){
+   if( max < numbers[index] ){
+        max = numbers[index];
+   }
+}
+console.log( max );
 
 // 메모 ( 기억 =변수 ) : 가장 큰 값
 /*
@@ -16,16 +24,7 @@ if( max < numbers[1]){ max = numbers[1]}
 if( max < numbers[1]){ max = numbers[1]} // 반복적인 코드 확인 
 console.log( max ); // 결과
 */
-/*
-let numbers = [23, 5, 67, 12, 88, 34];
-let max = 0; // 점수를 최저점수를 임의로 대입 시작
-for ( let index = 0 ; index <= numbers.length -1 ; index++){
-    // index는 0부터 ;  마지막인덱스 이하까지 ;  1씩 증가.
-    if( max < numbers[index]){ max = numbers[index];}
-    // 만약에 max보다 indeex번째 요소값이 더 크면 max에 index번째 요소값을 대입한다.
-}// for end
-console.log( max );
-*/
+
 
 /*
 문제 2: 별 찍기 (기본 역삼각형)
@@ -188,4 +187,3 @@ HTML에 차량 번호, 주차 시간, 최종 요금을 한 줄씩 출력합니�
 */
 
 
-여기도
