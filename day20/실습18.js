@@ -44,7 +44,7 @@ function productAdd() {
 
     // 3. 객체화
     const obj = {
-        pno: currentPno, //제품코드는 1 증가 후 저장 
+        pno: currentPno++, //제품코드는 1 증가 후 저장 
         pname: pname,
         pprice: Number(pprice), //제품가격은 숫자형 타입변환
         pimg: pimg ? URL.createObjectURL(pimg) : 'https://placehold.co/100x100',
@@ -115,7 +115,7 @@ function Add() {
     const mpriceInput = document.querySelector('#mpriceInput');
     const mtextInput = document.querySelector('#mtextInput');
     //(2) 입력 마크업객체에서 입력값 가져오기
-    const pno = pnoInput.value; console.log(pno);
+    const pno = Number(pnoInput.value); console.log(pno);
     // product 목록에서 입력받은 pno가 존재하지 않으면 return
     let check = false
     for (let index = 0; index <= productList.length - 1; index++) {
@@ -223,3 +223,4 @@ function getLocalStorage() {
 }
 
 
+console.log(productList)
