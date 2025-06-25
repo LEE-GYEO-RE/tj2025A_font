@@ -4,7 +4,37 @@
 
 </head>
 <body>
-    asdf
+    <div id="wrap">
+        <div id="header">
+            <input id="pnameInput" type="text" placeholder="제품명">
+            <input id="ppriceInput" type="number" placeholder="가격">
+            <textarea id="pcontentInput" placeholder="간단 설명"></textarea>
+            <input id="imgInput" type="file" accept="img/*">
+            <button onclick="productAdd()"> 등록 </button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>이미지</th>
+                    <th>제품명</th>
+                    <th>가격</th>
+                    <th>간단 설명</th>
+                    <th> 비고 </th>
+                </tr>
+            </thead>
+            <tbody id="productBody">
+                <tr>
+                    <td> <img src="#"> </td>
+                    <td> 콜라 </td>
+                    <td> 1000 </td>
+                    <td> 설명 </td>
+                    <button onclick="Delete()"> 삭제 </button>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
     
     <script src="test1.js"></script>
 </body>
