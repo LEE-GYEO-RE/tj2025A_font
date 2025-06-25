@@ -41,7 +41,8 @@ function productAdd() {
         alert('비어있는 항목이 있습니다.[실패]');
         return; // 반환값 없는 함수종료 : 아래코드는 실행되지 않는다.
     }
-
+    
+    
     // 3. 객체화
     const obj = {
         pno: currentPno++, //제품코드는 1 증가 후 저장 
@@ -208,19 +209,28 @@ function btnEdit(lno) {
 } // func end
 
 // ==================== 3. localStorage 관리하는 함수 ================= //
-function setLocalStorage(productList) {
-    localStorage.setItem('productList', JSON.stringify(productList));
-} // func end 
-
+// 사용처 ===> products배열이 필요한 곳. ====> 등록할 때 , 출력할 때 
+// 함수localStorage 에서 'products' 배열 가져오기
 function getLocalStorage() {
+    // 1. 호출하기
     let productList = localStorage.getItem('productList');
+    // 2. 만약 productList 가 null 이면 배열 생성
     if (productList == null) {
         productList = []
     } else {
+    // 있으면 JSON타입으로 변환
         productList = JSON.parse(productList)
     }
-    return productList; // 웹스토리지 에서 조회된 배열을 반환하는 함수, 없으면 []빈배열 , 있으면 [{},{}]
-}
+    // 3. 웹스토리지 에서 조회된 배열을 반환하는 함수, 없으면 []빈배열 , 있으면 [{},{}]
+    return productList; 
+} // funcs end
+
+// 함수 호출시 전달받은 매개변수 'products'를 localStorage 에서 배열 저장하기
+// 사용처 ===> products배열의 변화가 있는 곳 ==> 변화,수정,삭제 할때
+function setLocalStorage(productList) {
+    // 1. 저장하기
+    localStorage.setItem('productList', JSON.stringify(productList));
+} // func end 
 
 
 console.log(productList)
