@@ -30,4 +30,3 @@ function boardPrint(){
     boardTbody.innerHTML = html ;
 } // func end
 
-// (2) 삭제

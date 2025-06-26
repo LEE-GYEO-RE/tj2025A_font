@@ -1,3 +1,5 @@
+
+// (1) 쿼리스트링에서 특정한 게시물번호의 정보 조회
 getBoard();
 function getBoard(){
     // 1. URL(웹 주소) 상의 웹주소 가져오기
@@ -22,7 +24,7 @@ function getBoard(){
         }
         for( let i = 0 ; i <= boardList.length -1 ; i ++){                          // 선택된 게시물번호와 일치한 게시물 찾기
             const obj = boardList[i];
-            if( obj.no == selectNo ){                                               // 선택한 게시물번화 일치하면 = 내용 출력
+            if( obj.no == selectNo ){                                               // 선택한 게시물번호와 일치하면 = 내용 출력
                 document.querySelector('#title').innerHTML = obj.title              // title id 가진 마크업 사이에 방금 찾은 obj.title 넣는다
                 document.querySelector('#content').innerHTML = obj.content
                 return;                                                             // 안해도됨.
@@ -30,6 +32,7 @@ function getBoard(){
         }
 } // func end
 
+// (3) 삭제 함수
 function boardDelete(){
     // URL(웹주소) 상의 경로 가져오기
     // 경로 상의 선택된 게시물번호(쿼리스트링) 가져오기
