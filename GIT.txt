@@ -15,7 +15,74 @@
 1. vscode 왼쪽 메뉴 [소스제어] 클릭 -> windows용 git다운로드
     hhtps://git-scm.com/downloads
 2. [git for windows/x64 Setup.] 클릭하여 설치 진행    
-3. 다운로드 된 [Git-2.49]
+    3. 다운로드 된 [Git-2.49.0-64-bit.exe] 실행파일 실행 
+    4. 기본설정으로 계속 [next] 버튼 클릭하여 설치 진행 -> 완료
+    5. VSCODE 재실행 
+    6.  vscode 왼쪽 메뉴  [소스제어] 클릭 -> [ GitHub ] 게시 -> [로그인]허용 -> 웹페이지( 깃허브페이지(로그인) ) -> [continue ]
+    7. publish to github public repository (선택후) -> [확인]
+    =============== ( PC마다 1번 , 자리 변경시 ) ====================
+    8. vscode 상단 메뉴 [ 터미널 ] 클릭 -> [ 새 터미널 ] 
+    9. 터미널 상단메뉴 [+] 옆에 [v] 클릭 -> [ git bash ]    *깃허브 전용 터미널(명령어 이용한 프로그램 사용)
+        [ git user.name 확인 ] git config --global user.name
+        [ git user.name 설정 ] git config --global user.name git닉네임
+        [ git user.email 확인 ] git config --global user.email 
+        [ git user.email 설정] git config --global user.email git아이디@이메일포함
+    10. vscode 왼쪽 메뉴  [소스제어] 클릭 -> 
+        1. 상단에 메시지(코드를 업로드할때 기록할 메모) 작성 
+        2. [커밋]버튼 오른쪽 [v] 클릭하여 [ 커밋 및 푸시 ] 클릭  * 현재 PC에 git 완료 
+    *[ 원격 추가 ] 버튼 클릭 -> (tj2025a_front) 해당 폴터명 선택 -> main(원격) 추가
+    =============== ( PC마다 1번 , 자리 변경시 ) ====================
+
+[ 주요 용어 ]
+    1. repository : 저장소 *코드들을 저장하는 하나의 저장소 * 주로 프로젝트 단위
+    2. commit(커밋) : 코드 수정를 (로컬PC) 완료 * 로컬pc에만 완료되고 온라인(웹깃허브) 에는 반영이 안된다.
+    3. push(푸시) : 현재 로컬 코드를 깃허브(웹서비스)에 반영 작업
+    4. pull(풀) : 현재 웹서비스 버전으로 로컬 상태를 새로고침
+    
+[ 깃허브( 웹[VCS] 서비스 ) ]
+    - [학원 : 로컬PC] C:\Users\tj-bu-702-teacher\Desktop\tj2025A_front
+    - [집 : 로컬PC ] C:\Users\집컴퓨터\Desktop\tj2025A_front
+    - 예]
+        1. 학원에서 18:20 commit/push ---> 웹서비스 v1.1
+        2. 집에서 20:00 pull --> 집PC v1.1
+        3. 집에서 22:00 commit/push ---> 웹서비스 v1.2
+        4. 다음날 학원 에서 9:30 pull ---> 학원PC v1.2
+        5. 학원에서 18:20 commit/push ---> 웹서비스 v1.3
+        6. 집에서 20:00 pull -> 집pc v1.3
+    -------------------------------------------------------------------
+    * 관례적으로 코드 작업 하기전에 'pull' 기능 이용하여 깃허브 버전 상태 최신화
+
+[ 자리 변경 ]
+* 로그아웃 전에 꼭 commit/push
+(1) [ VSCODE 깃 로그아웃 ]
+    1. 왼쪽 하단 메뉴 [ 계정 ] 클릭 
+    2. 로그인된 아이디 -> [로그아웃]
+
+(2) [ 현재pc 깃 로그아웃 ]
+    1. 윈도우 찾기 검색창 : '자격증명관리자' 검색후 
+    2. (제어판)자격증명관리자 에서 [window 자격 증명] 클릭 
+    3. 하단 '일반 자격 증명' 목록에서 'git:http~~~' 클릭후 제거
+
+(3)
+	[ 브라우저 깃 로그아웃 ]
+	[ 개인 카카오톡 / 이메일 로그아웃 ]
+	[ 개인 파일/폴더 삭제 ]
+
+[ 자리 변경후 ]
+(1) 리포지토리 가져오기 
+    1. 왼쪽 메뉴 -> [ 소스 제어 ] 클릭
+    2. [리포지토리 복제] 클릭 
+    3. [gitHub 에서 복제] 클릭 -> 로그인 [허용]
+    4. 웹에서 로그인 인증
+    5. 가져올 리포지토리 명 선택
+-------------------------------
+(2) commit 계정정보 변경 
+    1. vscode 상단 메뉴 [ 터미널 ] 클릭 -> [ 새 터미널 ] 
+    9. 터미널 상단메뉴 [+] 옆에 [v] 클릭 -> [ git bash ]    *깃허브 전용 터미널(명령어 이용한 프로그램 사용)
+        [ git user.name 확인 ] git config --global user.name
+        [ git user.name 설정 ] git config --global user.name git닉네임
+        [ git user.email 확인 ] git config --global user.email 
+        [ git user.email 설정] git config --global user.email git아이디@이메일포함
 
 ==================
 [ VSCODE 깃 로그아웃 ]
