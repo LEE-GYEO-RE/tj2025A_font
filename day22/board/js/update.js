@@ -22,3 +22,31 @@ function getBoard(){
 } // func end
 
 // 수정처리 함수
+    // URL 경로 가져오기 ==> 밖에 함수로 지정하는 게 빠름
+    // URL 경로에서 내가 선택한 게시물번호('no') 가져오기 ===> 이것도 함수로 같이 지정하는게 빠름
+    // localStorage 에서 배열 가져오기 ==> 이것도 중복됨
+    // 반복문 써써 선택한 게시물번호의 게시물 찾기
+    // 찾은 게시물에 새롭게 입력받은 값으로 대입/수정
+    // view.html에 출력
+function boardUpdate(){
+    const url = new URLSearchParams ( location.search );
+    const selectNo = url.get('no');
+    let boardList = localStorage.getItem('boardList')
+    if( boardList == null ){
+        boardList = [];
+    }else{
+        boardList = JSON.parse(boardList)
+    }
+
+    for( i = 0 ; i < boardList.length ; i++){                                   // 반복문 써서 선택한 게시물번호의 게시물 찾기
+        const obj = boardList[i];
+        if( obj.no == selectNo ){
+            obj.title = document.querySelector('#titleInput').value;            // 새로 입력받은 값으로 대입/수정 = 재설정
+            obj.content = document.querySelector('#contentInput').value;
+            obj.pwd = document.querySelector('#pwdInput').value;    
+            localStorage.setItem('boardList' , JSON.stringify(boardList));
+            alert('수정완료');
+            location.href = `view.html?no=${selectNo}`
+        }
+    }
+}
