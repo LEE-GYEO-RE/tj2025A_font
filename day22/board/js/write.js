@@ -23,7 +23,7 @@ function boardWrite(){
         boardList = JSON.parse(boardList)
     }
 
-    obj.no = boardList.length == 0 ? 1 : boardList[boardList.length -1 ].no +1 
+    obj.no = boardList.length == 0 ? 1 : boardList[boardList.length -1].no +1 
 
     boardList.push(obj);
 
