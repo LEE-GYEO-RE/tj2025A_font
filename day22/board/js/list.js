@@ -1,3 +1,5 @@
+// (1) 쿼리스트링에서 특정한 게시물번호의 정보 조회
+
 boardPrint();                                                                       // JS 실행될때 최초 1번실행
 function boardPrint(){
     // 1. 어디에 <tbody id="boardTbody">
@@ -18,7 +20,7 @@ function boardPrint(){
 
     let html = '';
 
-    for( let i = 0 ; i < boardList.length -1 ; i++){                                        // 반복문 돌려서 조회
+    for( let i = 0 ; i < boardList.length ; i++){                                        // 반복문 돌려서 조회
         const obj = boardList[i];                                                           // 쿼리스트링 사용법 ?변수명=값
         html += `<tr>
                     <td>${obj.no} </td>
@@ -27,3 +29,5 @@ function boardPrint(){
     } // for end
     boardTbody.innerHTML = html ;
 } // func end
+
+// (2) 삭제
